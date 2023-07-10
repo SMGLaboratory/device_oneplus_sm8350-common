@@ -3,12 +3,16 @@
      Copyright (C) 2022 The LineageOS Project
      SPDX-License-Identifier: Apache-2.0
 -->
-<resources>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
 
     <!-- Max network scan search time in seconds -->
     <integer name="config_network_scan_helper_max_search_time_sec">254</integer>
 
     <!-- Whether to show refresh rate in display settings -->
     <bool name="config_show_refresh_rate_controls">true</bool>
+
+    <string name="maintainer_name">VHP (vherawidatama)</string>
+    <string name="maintainer_telegram">https://t.me/vherawidatama</string>
+
 
 </resources>

@@ -36,28 +36,45 @@ void vendor_load_properties() {
     auto device = GetProperty("ro.product.product.device", "");
     auto prjname = std::stoi(GetProperty("ro.boot.prjname", "0"));
     auto rf_version = std::stoi(GetProperty("ro.boot.rf_version", "0"));
+    char* build_fingerprint;
+    char* build_desc;
+
+    build_desc = "redfin-user 13 TQ3A.230705.001 10216780 release-keys";
+    build_fingerprint = "google/redfin/redfin:13/TQ3A.230705.001/10216780:user/release-keys";
 
     switch (prjname) {
         // ice
         case 21643: // KE
             OverrideProperty("ro.product.product.model", "RMX3461T2");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         // lunaa
         case 21603: // CN
             OverrideProperty("ro.product.product.model", "RMX3361");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         case 21675: // IN
             OverrideProperty("ro.product.product.model", "RMX3360");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         case 21676: // EU
             OverrideProperty("ro.product.product.model", "RMX3363");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         // martini
         case 20820: // CN
             OverrideProperty("ro.product.product.model", "MT2110");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         case 20821: // IN
             OverrideProperty("ro.product.product.model", "MT2111");
+            OverrideProperty("ro.build.fingerprint", build_fingerprint);
+            OverrideProperty("ro.build.description", build_desc);
             break;
         default:
             LOG(ERROR) << "Unexpected project name: " << prjname;
